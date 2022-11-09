@@ -16,11 +16,16 @@ from pybricks.media.ev3dev import SoundFile, ImageFile
 ev3 = EV3Brick()
 left_motor = Motor(Port.A)
 right_motor = Motor(Port.B)
+crane = Motor(Port.C)
 
 
 # Write your program here.
 robot = DriveBase(left_motor, right_motor, wheel_diameter=55.5, axle_track=104)
 
-robot.straight(500)
-robot.turn(4*360)
-#grabber.run(1000)
+#ev3.speaker.say("going straight")
+#robot.straight(100)
+
+#ev3.speaker.say("turning")
+#robot.turn(360)
+
+crane.run_time(1000,1000)
