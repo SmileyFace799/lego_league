@@ -18,14 +18,22 @@ left_motor = Motor(Port.A)
 right_motor = Motor(Port.B)
 crane = Motor(Port.C)
 
-
 # Write your program here.
-robot = DriveBase(left_motor, right_motor, wheel_diameter=55.5, axle_track=104)
+robot = DriveBase(left_motor, right_motor, wheel_diameter=52.25, axle_track=140)
 
-#ev3.speaker.say("going straight")
-#robot.straight(100)
+#crane.run_time(-1000,1000)
 
-#ev3.speaker.say("turning")
-#robot.turn(360)
+def windmillRun():
+    robot.straight(360)
+    robot.turn(90)
+    robot.straight(100)
+    
+    robot.straight(-100)
+    robot.turn(-90)
+    robot.straight(-360)
 
-crane.run_time(1000,1000)
+while True:
+    pressed = ev3.buttons.pressed()
+    if pressed:
+        windmillRun()
+    
