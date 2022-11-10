@@ -31,9 +31,18 @@ def windmillRun():
     robot.straight(-100)
     robot.turn(-90)
     robot.straight(-360)
+    
+def car():
+    #crane.run_angle(1000, 360, wait=True)
+    robot.turn(90)
+    #robot.straight(100)
+
 
 while True:
     pressed = ev3.buttons.pressed()
     if pressed:
         windmillRun()
+
+    if Button.LEFT in ev3.buttons.pressed():
+        car()
     
