@@ -20,10 +20,12 @@ crane = Motor(Port.C)
 
 
 # Write your program here.
-robot = DriveBase(left_motor, right_motor, wheel_diameter=55.5, axle_track=120)
+robot = DriveBase(left_motor, right_motor, wheel_diameter=52.25, axle_track=140)
 
 def car():
+    #crane.run_angle(1000, 360, wait=True)
     robot.turn(90)
+    #robot.straight(100)
 
 
 while True:
