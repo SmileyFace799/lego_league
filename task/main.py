@@ -23,15 +23,22 @@ robot = DriveBase(left_motor, right_motor, wheel_diameter=54, axle_track=140)
 
 #crane.run_time(-1000,1000)
 
+#using temporary values
 def windmillRun():
-    robot.straight(360)
-    robot.turn(90)
-    robot.straight(100)
-    
-    robot.straight(-100)
-    robot.turn(-90)
-    robot.straight(-360)
-    
+    robot.straight(500)
+    robot.straight(-230)
+    robot.turn(-53) #45
+    robot.straight(500)
+    robot.turn(95) #90
+    robot.straight(400)
+    robot.straight(-150)
+    robot.straight(400)
+    robot.straight(-150)
+    robot.straight(400)
+    robot.straight(-150)
+    robot.turn(-70)
+    robot.straight(-600)
+
 def car():
     robot.straight(850)
     crane.run_angle(500, -1800, wait=True)
